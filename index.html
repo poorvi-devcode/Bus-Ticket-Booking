@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Ticket Booking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚌 EasyBus Booking</h1>
+    <nav>
+      <a href="#" id="homeLink" class="active">Home</a>
+      <a href="#" id="myTripsLink">My Trips</a>
+    </nav>
+  </header>
+
+  <!-- Search Section -->
+  <section id="searchSection" class="search-section">
+    <h2>Find & Book Your Bus</h2>
+    <div class="search-form glass-card">
+      <input type="text" id="from" placeholder="From (e.g., Mumbai)" />
+      <input type="text" id="to" placeholder="To (e.g., Pune)" />
+      <input type="date" id="date" />
+      <button id="searchBtn">Search Bus</button>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section id="results" class="results-section hidden">
+    <h2>Available Buses</h2>
+    <div id="busList" class="bus-list"></div>
+  </section>
+
+  <!-- My Trips Section -->
+  <section id="myTripsSection" class="hidden">
+    <h2>My Trips</h2>
+    <div id="myTripsList" class="bus-list"></div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close">&times;</span>
+      <h2>🪑 Seat & Passenger Details</h2>
+      <p id="busDetails"></p>
+
+      <div id="seatLayout" class="seat-layout"></div>
+
+      <form id="passengerForm">
+        <h3>Passenger Info</h3>
+        <input type="text" id="passengerName" placeholder="Full Name" required />
+        <input type="number" id="passengerAge" placeholder="Age" required />
+        <select id="passengerGender" required>
+          <option value="">Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </form>
+
+      <button id="confirmBooking" class="confirm-btn">Confirm Booking</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 EasyBus Booking | Designed with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
